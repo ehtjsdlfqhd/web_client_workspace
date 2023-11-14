@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML | Media</title>
+</head>
+<body>
+    <h1>Media</h1>
+    <!--
+        html5에서는 미디어 관련해서 별도의 플러그인 없이 재생이 가능하다.
+    -->
+    <h2>audio</h2>
+    <audio src="../sample/audio/major.mp3" controls></audio>
+    <h2><video</video></h2>
+
+    <audio controls>
+        <source src="../sample/image/major3"
+    </audio>
+
+    <h2>video</h2>
+    <video src="../sample/video/small.mp4"
+        width="500px"
+        muted
+        loop
+        poster="../sample/image/city1.PNG"
+        controls></video>
+
+    <video>
+        <!--
+            디바이스별로 최적화된 자원을 선택재생
+            - pc browser인 경우 mp4/webm/ogg 순
+            - mobile browser인 경우 mp4/3gp 순으로 선호
+
+            서버 부하를 줄이기위해 용량이 큰 용영상파일은 별도의 미디어서버 또는
+            
+        -->
+        <source src="../sample/video/small.webm" type="video/webm">
+        <source src="../sample/video/small.ogv" type="video/ogg">
+        <source src="../sample/video/small.mp4" type="video/webm">
+    </video>    
+</body>
+</html>
