@@ -1,0 +1,16 @@
+#img-wrapper {
+    width: 800px;
+    height: 200px;
+    background-color: gainsboro;
+    text-align: center;
+    margin: 0 auto;
+    padding-top: 30px;
+}
+img {
+    width: 180px;
+    height: 125px;
+    margin-right: 10px;
+}
+img:hover {
+    box-shadow: 5px 5px 8px black;
+}
