@@ -1,0 +1,42 @@
+#sample {
+    /*block요소 하위 텍스트 정렬*/
+    text-align: center;    
+    text-decoration: underline 2px wavy; /* underline | line-through*/
+    text-shadow: 3px 3px 0px gray; /*x-offset y-offset spread color */
+}
+
+a {
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+.background {
+    width: 500px;
+    height: 600px;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.background ul {
+    list-style: none;
+    font-size: 90px;
+    font-weight: bold;
+}
+#bg1 {
+    color: orangered;
+    text-shadow: 6px 6px 0px orange;
+}
+#bg2 {
+    color: white;
+    text-shadow: 0px 0px 15px white;
+}
+#bg3 {
+    color: white;
+    text-shadow: 0px 0px 15px greenyellow;
+}
+#bg4 {
+    color: black;
+    text-shadow: 0px -10px 10px orange, 0 0 5px white;
+}

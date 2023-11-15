@@ -1,0 +1,30 @@
+.parent {
+    background-color: bisque;
+    text-align: center;
+}
+.parent span {
+    background-color: blueviolet;
+}
+.box {
+    width: 200px;
+    height: 200px;
+    border: 2px solid #000000; /* #rrggbb #rgb */
+    /* center 위아래 좌우 */
+    /* margin: 0 auto; */
+    /* right */
+    /* margin-left: auto; */
+    /* left */
+    /* margin-right: auto; */
+}
+.item {
+    width: 220px;
+    height: 200px;
+    border: 2px solid rebeccapurple;
+    /* text-align: center; */
+    margin: 0 auto;
+
+    /* 상하좌우 가운데 정렬 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

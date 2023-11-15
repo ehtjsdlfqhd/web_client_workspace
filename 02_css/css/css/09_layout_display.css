@@ -1,0 +1,17 @@
+.block {
+    width: 150px;
+    height: 150px;
+    border: 1px solid #000;
+}
+.color1 {background-color: red;}
+.color2 {background-color: palegreen;}
+.color3 {background-color: goldenrod;}
+.color4 {background-color: blue;}
+.color5 {background-color: purple;}
+
+.d-inline { display: inline;}
+.d-block { display: block;}
+.d-inline-block {display: inline-block;}
+.d-none {display: none;}
+.v-hidden {visibility: hidden;}
+.opacity-0 {opacity: 0;}

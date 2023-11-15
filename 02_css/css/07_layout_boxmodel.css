@@ -1,0 +1,21 @@
+.item {
+    width: 300px;
+    height: 300px;
+    background-color: darkgreen;
+    border: 5px solid #000;
+    /* padding-top: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px; */
+    /* padding: 10px 10px 10px 10px; */
+    /* padding: 10px 10px 10px;  생략된 값은 맞은편 값을 가져옴 */
+    padding: 10px; /* 하나의 값은 모든 값으로 처리 */
+    margin: 5px;
+}
+.item span {
+    width: 150px; /* inline 요소 적용 안됨 */
+    height: 150px; /* inline 요소 적용 안됨 */
+    background-color: beige;
+    padding: 5px;
+    margin: 50px 30px; /* inline 요소는 위 아래 적용 안됨, 좌우적용 */
+}
