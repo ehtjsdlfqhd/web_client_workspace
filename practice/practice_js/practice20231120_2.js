@@ -13,11 +13,12 @@ function movie() {
 }
 
 function color() {
-    for(let i = 0; i<7; i++) {
-        const rainbow = ["빨", "주", "노", "초", "파", "남", "보"];
-        rainbow.push();
-        rainbow.shift();
-        console.log(rainbow);
+    const rainbow = ['빨', '주', '노', '초', '파', '남', '보'];
+    for (let i = 0; i < rainbow.length; i++) {
+        console.log(rainbow.toString());
+        // shift = 0번지 요소 제거
+        // push = 마지막 요소로 추가
+        rainbow.push(rainbow.shift());
     }
 }
 
