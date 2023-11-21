@@ -27,7 +27,7 @@ function test1() {
 /**
  * 반복문
  * - for
- * - for in문 : 각 속성명(index)을 매 턴에 반환
+ * - for in문 : 각 속성명(index)을 매 턴에 반환, 객체순회에 적합
  * - for of문 : 각 속성값을 매턴에 반환 
  */
 function test2() {
