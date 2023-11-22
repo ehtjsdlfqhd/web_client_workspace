@@ -80,6 +80,11 @@ const test2 = () => {
         //메소드 단축문법, 메소드일때만 사용가능
         eat(food){
             console.log(`${this.username}이(가) ${food}를 먹는다.`);
+        },
+        work : () => {
+            // 메소드에 화살표함수 사용 피해야 하는 이유
+            console.log(this); // this가 window를 가르키므로 undefined 발생
+            console.log(`${this.username}~일해라~`);
         }
     }
 
@@ -89,6 +94,8 @@ const test2 = () => {
 
     user[`run`]();
     user[`eat`]('🍧');
+
+    user.work();
 };
 
 /**
