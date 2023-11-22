@@ -5,5 +5,8 @@ test01 = () => {
         return arr;
     }, []);
     
-    console.log(texts);
+    const texts2 = texts.map(function(e){
+        return e.toUpperCase()
+    });
+    console.log(texts2);
 }
