@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>눈코딩</title>
+</head>
+<body>
+    <ul>눈코딩 실습
+        <li>1. 함수에서 계산된 값  z = 100 출력, 그 후 바깥 로그는 전역변수 z = 50출력</li>
+        <li>2. 함수에서 계산된 값 x+y+z = 110 출력</li>
+        <li>2_1. 바깥로그 y+z = 전역변수 y 참조해서 99+1 = 100 출력</li>
+        <li>2_2. x+y+z를 바깥에서 출력하려 했으나 참조할 x,z값이 없어 오류발생</li>
+        <li>3. 전역변수i가 for문에 의해 11로 변환 후 11 출력</li>
+        <li>4. foo함수에는 자유변수 num = 100이 있기때문에 전역변수 num = 200을 참조하지않음, 100출력</li>
+    </ul>
+    <script>
+        //1
+        let z = 50;
+        (() => {
+            let z = 55;
+            z += 45;
+            console.log(`z = ${z}`);
+        })();              
+        console.log(`z = ${z}`);   
+        
+        //2
+        let y = 99;
+        (() => {
+            let x = 100;
+            let y = 9;
+            z = 1;
+            console.log(`x + y + z = ${x + y + z}`);
+        })();
+        console.log(`y + z = ${y + z}`);
+        // console.log(`x + y + z = ${x + y + z}`);
+        
+        //3
+        let i; // 전역 i
+        for (i = 1; i <= 10; i++) {
+            console.log(i); // 1~10까지 출력
+        }
+        
+        (() => {
+            console.log(`i = ${i}`); 
+        })();
+            
+        //4 
+        function foo(){
+            const num = 100;
+            return () => {
+                console.log(`num = ${num}`);
+            }
+        }
+        const num = 200;
+        const too = foo();
+        too();
+    </script>
+</body>
+</html>
