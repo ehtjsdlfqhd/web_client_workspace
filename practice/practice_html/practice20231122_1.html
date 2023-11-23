@@ -16,11 +16,11 @@
     <ul>
         <li>aoo = 100 (함수 안의 자유변수 a 참조)</li>
         <li>boo1 = 99 (함수 안의 자유변수 b 참조, return값은 관계없음)</li>
-        <li>boo1 오답 = undefined 출력됨. return으로 반환되면 값이 사라지나요?</li>
-        <li>boo2 = 999 (return값을 button에서 지정해줬다?)</li>
-        <li>coo1 = c값 n값 두개를 모두 지정, c * n = 15 출력</li>
+        <li>boo1 오답 = undefined 출력됨. b의 값이 없기때문</li>
+        <li>boo2 = 999 (c 값을 지정해줌)</li>
+        <li>coo1 = 자유변수 c=3, 지역변수 n=5 3 * 5 = 15</li>
         <li>coo2 = c값이 지정되지 않아 c * n = undefined 출력</li>
-        <li>coo2 오답 = NaN출력됨. 😮</li>
+        <li>coo2 오답 = undefined와 관련된 연산은 모두 NaN출력됨. 😮</li>
     </ul>
 	<script>
 	const a = 1;
@@ -58,7 +58,16 @@
 
 	<script>
 	const mkAddFunc = () => {
-		
+		let sum = 0;
+		return () => {
+			const myadder = document.querySelector("#myadder");
+			// id값만으로도 참조할 수 있지만 위험도가 있기때문에 선언해주는게 좋음
+			if(isNaN(myadder.value)) return;
+			sum += Number(myadder.value);
+			// 문자열로 값을 받았기 때문에 + 연산을 위해 숫자로 바꿔줌
+			result.innerHTML = sum;
+		}
+		// 자유변수 sum까지 포함해서 반환
 	};
 	const addFunc = mkAddFunc();
 	</script>
