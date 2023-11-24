@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>포트폴리오 문제</title>
+    <style>
+        /* form 테이블 css */
+        #box1 {height: 500px; border-top: 1px solid #000; border-bottom: 1px solid #000;}
+        #box1 fieldset {height: 370px; margin-top: 30px;}
+        p, h1, h2, h3, h4 {margin: 0; padding: 0; display: inline;}
+        #form_table { width: 500px; height: 250px;}
+        #form_table tr:last-child td {text-align: center;}
+        #form_table tr:nth-child(2) {height: 200px;}
+
+        /* 두 번째 일반테이블 css */
+
+    </style>
+</head>
+<body>
+    <!-- 첫번째 문제 form 테이블 -->
+    <h1>포트폴리오 문제</h1>
+    <form action="insert.no" method="post" id="box1">
+        <fieldset>
+            <legend>공지사항 작성하기</legend>
+            <table id="form_table">
+                <thead></thead>
+
+                <tbody>
+                    <tr>
+                        <th>제목</th>
+                        <td>
+                            <label for="title"></label>
+                            <input type="text" name="title" id="title" style="width: 400px;"
+                            placeholder="제목을 입력하시오." required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>내용</th>
+                        <td>
+                            <label for="content"></label>
+                            <input type="text" name="content" id="content" style="width: 400px; padding-bottom: 150px;"
+                            placeholder="내용을 입력하시오." required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>첨부파일</th>
+                        <td>
+                            <label for="uploadFile"></label>
+                            <input type="button" name="uploadFile" id="uploadFile" value="파일제출">
+                            <span>선택된 파일 없음</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <input type="submit" value="작성하기" style="margin-top: 30px;">
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </fieldset>
+    </form>
+
+    <!-- 두번 째 문제 테이블 표 -->
+    <table>
+        <thead>
+            <tr>
+                <th>번호</th>
+                <th colspan="2">제목</th>
+                <th>작성자</th>
+                <th>작성일</th>
+                <th>조회수</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>9</td>
+                <td>공지사항제목</td>
+                <td><button>바로가기</button></td>
+                <td>user01</td>
+                <td>2021-03-29</td>
+                <td>34</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+    
+</body>
+</html>
