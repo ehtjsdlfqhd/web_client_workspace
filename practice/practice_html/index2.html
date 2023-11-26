@@ -7,19 +7,17 @@
     <style>
         body {background-color: rgb(224, 247, 255);}
         #box1 {width: 400px; margin: 50px auto; border: 1px solid #aaaaaa; background-color: #f5f5f5; padding: 80px 20px 10px 20px;}
-        #box1 tbody tr{height: 40px;}
+        #box1 tbody tr{height: 45px;}
         #box1 tbody tr:last-child {text-align: center;}
-        #box1 tbody tr:nth-child(4) {height: 10px;}
-        #box1 tbody tr:nth-child(4) td {font-size: 12px; color: #aaaaaa;}
+        #box1 tbody tr#sub {height: 20px; font-size: 12px; color: #aaaaaa; visibility: hidden;}
         #box1 tbody tr td:first-child {width: 120px; font-weight: bold;}
-        
-        input {border: 0; background-color: transparent; border-bottom: 1px dashed #000; width: 240px;}
+        input {border: 0; background-color: transparent; border-bottom: 1px dashed #000; width: 240px; border-width: 2px;}
+        input#email {width: 110px;}
+        input#email2 {width: 110px;}
         input:focus {outline: none;}
         input#join {width: 380px; height: 50px;
              background-color: rgb(201 237 200); border: none; margin-top: 30px;}
         input#join:hover {cursor: pointer;}
-        
-        
         
     </style>
 </head>
@@ -37,7 +35,13 @@
                 <tr>
                     <td>패스워드</td>
                     <label for="password"></label>
-                    <td><input type="text" id="password" name="password" required></td>
+                    <td>
+                        <input type="text" id="password" name="password" required>
+                    </td>
+                </tr>
+                <tr id="sub">
+                    <td></td>
+                    <td>영문자 대/소문자 특수문자, 숫자 포함 8~32자</td>
                 </tr>
                 <tr>
                     <td>패스워드 확인</td>
@@ -45,13 +49,10 @@
                     <td><input type="text" id="pass_check" name="pass_check" required></td>
                 </tr>
                 <tr>
-                    <td></td>
-                    <td>영문자 대/소문자 특수문자, 숫자 포함 8~32자</td>
-                </tr>
-                <tr>
                     <td>이메일</td>
                     <label for="email"></label>
-                    <td><input type="text" id="email" name="email" required></td>
+                    <label for="email2"></label>
+                    <td><input type="text" id="email" name="email" required>@<input type="text" id="email2" name="email2" required></td>
                 </tr>
                 <tr>
                     <td>주소</td>
@@ -70,5 +71,42 @@
             </tbody>
         </table>
     </form>
+    <script>
+        // 필수값체크, 하지만 입력칸 아래 추가하기는 못 풀었습니다.
+        document.querySelector("#id").addEventListener('blur', (e) => {
+            const value = e.target.value;
+            if(value.length === 0) {
+                console.log("필수 입력 항목입니다.");
+                return;
+            }
+        });
+        document.querySelector("#password").addEventListener('blur', (e) => {
+            const value = e.target.value;
+            if(value.length === 0) {
+                console.log("필수 입력 항목입니다.");
+                return;
+            }
+        });
+        document.querySelector("#pass_check").addEventListener('blur', (e) => {
+            const value = e.target.value;
+            if(value.length === 0) {
+                console.log("필수 입력 항목입니다.");
+                return;
+            }
+        });
+        
+        // 패스워드 조건식 출력
+        document.querySelector("#password").addEventListener('focus', () => {
+            const checked = document.getElementById("sub");
+            console.log(checked);
+            checked.style.visibility = "visible";
+        });
+        document.querySelector("#password").addEventListener('blur', () => {
+            const checked = document.getElementById("sub");
+            console.log(checked);
+            checked.style.visibility = 'hidden';
+        });
+    </script>
+    
 </body>
 </html>
