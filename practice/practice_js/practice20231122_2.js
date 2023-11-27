@@ -45,6 +45,8 @@ const test2 = () => {
               age : 33
         }
       ]
-    const members = [];
-    members.push()
+    people.forEach((member) => {
+        const {name, family: {father, mother, ...bs}} = member;
+        console.log(`이름 ${name}, 아빠 : ${father}, 엄마 : ${mother}, 형재자매 : ${Object.values(bs)}`);
+    });
 }
