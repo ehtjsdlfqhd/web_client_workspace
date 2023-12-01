@@ -62,7 +62,7 @@
     <h2>Selector3</h2>
     <script>
         //button문제
-        function clear(){}
+        function clear(){const $clear = $('tr td').css('color','black');}
         function click1(){const $gar = $('tr:nth-child(2) td:not(:first)').css('color','purple');}
         function click2(){const $nar = $('tr:nth-child(3) td:not(:first)').css('color','purple');}
         function click3(){const $A = $('td:nth-child(2):not(:last)').css('color','purple');}
